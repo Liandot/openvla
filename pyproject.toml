@@ -34,7 +34,7 @@ dependencies = [
     "accelerate==1.12.0",
     "draccus==0.8.0",
     "einops==0.8.1",
-    # "flash_attn==2.5.5",      # Here for documentation -- install *AFTER* editable install (follow README)
+    "flash-attn==2.5.5",      # Here for documentation -- install *AFTER* editable install (follow README)
     "huggingface-hub==0.36.0",
     "json-numpy==2.1.1",
     "jsonlines==4.0.0",
@@ -192,6 +192,8 @@ dependencies = [
     "wheel==0.45.1",
     "wrapt==1.14.2",
     "zipp==3.23.0",
+    "libero",
+    "nvitop>=1.6.1",
 ]
 
 [project.optional-dependencies]
@@ -211,6 +213,16 @@ sagemaker = [
 name = "tuna"
 url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 default=true
+
+[tool.uv.workspace]
+members = [
+    "LIBERO",
+]
+
+[tool.uv.sources]
+libero = { workspace = true, editable = true }
+flash-attn = { path = "flash_attn-2.5.5+cu122torch2.2cxx11abiFALSE-cp310-cp310-linux_x86_64.whl" }
+
 
 [project.urls]
 homepage = "https://github.com/openvla/openvla"
