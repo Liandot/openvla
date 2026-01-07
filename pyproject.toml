@@ -221,7 +221,7 @@ members = [
 
 [tool.uv.sources]
 libero = { workspace = true, editable = true }
-flash-attn = { path = "flash_attn-2.5.5+cu122torch2.2cxx11abiFALSE-cp310-cp310-linux_x86_64.whl" }
+flash-attn = { path = "wheels/flash_attn-2.5.5+cu122torch2.2cxx11abiFALSE-cp310-cp310-linux_x86_64.whl" }
 
 
 [project.urls]
